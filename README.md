@@ -1,0 +1,2 @@
+# splatoonStageBot
+スプラトゥーンのステージをdiscodeに通知してくれるbot

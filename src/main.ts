@@ -1,11 +1,11 @@
-import { GoogleSpreadsheet } from "google-spreadsheet"
+import { GoogleSpreadsheet } from "google-spreadsheet";
+import env = require ("~/env")
 
 function main(){
     // 投稿先のdiscodeのHooks
     const urlSendToDiscord: string =  getSheetValue("urls","name","discodeDev","url")
     // ステージ情報を取得
     const stageInfo = getStageInfo()
-    
     // 投稿するステージの内容と設定
     const postPayload: object = makePostPayload(stageInfo)
     doPost(urlSendToDiscord, postPayload)
@@ -56,16 +56,10 @@ function doPost(urlSendToDiscord, postPayload) {
     }
 }
 
-function a(){
-    const discodeUrl = getValue("urls","name","discode","url")
-    console.log(discodeUrl)
-    const stageId = getValue("stages","id","10","name")
-    console.log(stageId)
-}
-
 function getSheetValue(sheetName,searchColumnIndex, searchColumnValue, fetchValueColumn) {
     // スプレッドシート＆シートオブジェクトを取得
-    const ss = SpreadsheetApp.openById("1vCAE8K7_I7IX9aBGlKSFnt3oNoZLoN4oX-T2eGuWQHs");
+    console.log(env())
+    const ss = SpreadsheetApp.openById(env());
     var sheet = ss.getSheetByName(sheetName);
     var a = sheet.getLastColumn()
     console.log(a)
@@ -99,8 +93,8 @@ function getSheetValue(sheetName,searchColumnIndex, searchColumnValue, fetchValu
 
     // 検索した値の行の取得したい列から値を取得
     const range3 = sheet.getRange(c+2,urlIndex2+1)
-    var value = range3.getValue();
-    console.log(value)
+    var result = range3.getValue();
+    console.log(result)
 
-    return value
+    return result
 }

@@ -1,0 +1,33 @@
+{
+  "name": "splatoonstagebot",
+  "version": "1.0.0",
+  "description": "スプラトゥーンのステージをdiscodeに通知してくれるbot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yozzzo/splatoonStageBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yozzzo/splatoonStageBot/issues"
+  },
+  "homepage": "https://github.com/yozzzo/splatoonStageBot#readme",
+  "devDependencies": {
+    "@google/clasp": "^2.4.1",
+    "@types/google-spreadsheet": "^3.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
+    "eslint": "^8.23.1",
+    "tslint": "^6.1.3",
+    "typescript": "^4.8.3"
+  },
+  "dependencies": {
+    "@types/google-apps-script": "^1.0.55",
+    "google-spreadsheet": "^3.3.0"
+  }
+}

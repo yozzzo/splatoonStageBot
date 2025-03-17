@@ -28,6 +28,6 @@
   },
   "dependencies": {
     "@types/google-apps-script": "^1.0.55",
-    "google-spreadsheet": "^3.3.0"
+    "google-spreadsheet": "^4.1.4"
   }
 }
